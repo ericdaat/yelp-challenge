@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block body %}
+	<p>You typed: {{ text }}<br> 
+	I think this is {{ sentiment }}</p>
+
+	<form action="/" method="get">
+		<input type="submit" value="Try again">
+	</form>
+{% endblock %}

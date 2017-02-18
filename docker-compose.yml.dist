@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  sentiment-classifier:
+    build: ./applications/sentiment-classifier
+    volumes:
+     - ./applications/sentiment-classifier/:/home/sentiment-classifier/
+    expose:
+     - 9000
+    ports:
+     - 8080:9000
+    logging:
+     driver: "json-file"
+     options:
+      max-size: "10m"
+      max-file: "2"
