@@ -1,9 +1,11 @@
 {% extends "layout.html" %}
 
 {% block body %}
-	<form action="/classify" method="post">
-		Text:<br>
-		<input type="text" name="text"><br>
+	<p>Type the text you would like to analyze in the form below</p>
+	
+	<textarea name="text" form="usrform"></textarea>
+	
+	<form action="/classify" id="usrform" method="post">
 		<input type="submit" value="Submit">
 	</form>
 {% endblock %}

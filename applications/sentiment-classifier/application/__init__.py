@@ -15,7 +15,7 @@ def index():
 @app.route('/classify', methods=['POST'])
 def classify():
 	text = request.form['text']
-	
+
 	try:
 		assert len(text) > 0
 	except:
