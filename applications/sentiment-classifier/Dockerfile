@@ -12,16 +12,20 @@ RUN apt-get install -y \
     python-dev \
     python-distribute \
     python-pip \
-    python-scipy \
-    python-numpy \
     libpcre3 \
-    libpcre3-dev
+    libpcre3-dev \
+    libblas-dev \
+    liblapack-dev \
+    libatlas-base-dev \
+    gfortran
 
 
 RUN pip install \
     --upgrade pip \
     uwsgi \
     flask \
+    numpy \
+    scipy \
     -U scikit-learn
 
 RUN useradd -ms /bin/bash wsgi
