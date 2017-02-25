@@ -7,12 +7,12 @@ app = Flask(__name__)
 sgd_clf = joblib.load('./application/models/sgd_clf.pkl') 
 
 
-@app.route('/')
+@app.route('/sentiment-classifier')
 def index():
 	return render_template('index.html'), 200
 
 
-@app.route('/classify', methods=['POST'])
+@app.route('/sentiment-classifier/classify', methods=['POST'])
 def classify():
 	text = request.form['text']
 	try:
