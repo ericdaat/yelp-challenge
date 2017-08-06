@@ -1,0 +1,6 @@
+*.pyc
+*.pkl
+docker-compose.yml
+applications/sentiment-classifier/wsgi.ini
+venv/
+dataset/
